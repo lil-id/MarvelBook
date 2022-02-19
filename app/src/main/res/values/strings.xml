@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MarvelBook</string>
+    <string name="heroes_name">Heroes Name</string>
+    <string name="detail">Detail</string>
+</resources>
