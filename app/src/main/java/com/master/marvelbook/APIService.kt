@@ -9,7 +9,7 @@ object APIService {
 
     init {
         val retrofit = Retrofit.Builder()
-            .baseUrl(constants.URL)
+            .baseUrl(Constants.URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 

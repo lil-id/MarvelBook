@@ -9,7 +9,7 @@ interface MarvelInterface {
     @GET("characters")
     fun getCharacters(
         @Query("ts") ts: String?,
-        @Query("apiKey") apiKey: String?,
-        @Query("hash") hash: String?,
-    ) : Call<CharacterData>
+        @Query("apikey") apiKey: String?,
+        @Query("hash") hash: String?
+    ): Call<CharacterData>
 }

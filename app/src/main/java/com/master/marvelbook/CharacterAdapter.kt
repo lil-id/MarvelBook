@@ -20,7 +20,7 @@ class CharacterAdapter(val data: List<Result>, val context: Context): RecyclerVi
         holder.characterName.text = character.name
         holder.characterAbout.text = character.description
 
-        val img = "${character.thumbnail.path}/potrait_incredible.jpg"
+        val img = "${character.thumbnail.path}/standard_amazing.jpg"
 
         Glide.with(context).load(img).into(holder.characterImg)
     }

@@ -19,8 +19,8 @@ class MainActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.rv_heroes)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        APIService.instance.getCharacters(constants.ts, constants.APIKey, constants.hash)
-            .enqueue(object: Callback<CharacterData>{
+        APIService.instance.getCharacters(Constants.ts, Constants.APIKey, Constants.hash)
+            .enqueue(object: Callback<CharacterData> {
                 override fun onResponse(
                     call: Call<CharacterData>,
                     response: Response<CharacterData>
