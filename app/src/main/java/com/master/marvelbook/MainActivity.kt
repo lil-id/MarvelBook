@@ -1,7 +1,10 @@
 package com.master.marvelbook
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.master.marvelbook.data.CharacterData
@@ -32,5 +35,23 @@ class MainActivity : AppCompatActivity() {
                 }
 
             })
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.about_person, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        setMode(item.itemId)
+        return super.onOptionsItemSelected(item)
+    }
+    private fun setMode(selectedMode: Int) {
+        when (selectedMode) {
+            R.id.about_author -> {
+                val moveIntent = Intent(this@MainActivity, AboutAuthor::class.java)
+                startActivity(moveIntent)
+            }
+        }
     }
 }

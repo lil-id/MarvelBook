@@ -1,5 +1,10 @@
 <resources>
-    <string name="app_name">MarvelBook</string>
+    <string name="app_name">Marvel</string>
     <string name="heroes_name">Heroes Name</string>
+    <string name="about">About</string>
     <string name="detail">Detail</string>
+    <string name="about_me">About Me</string>
+    <string name="name_author">Kholil Haq Alim Hakim</string>
+    <string name="about_author">Luwu Timur, Indonesia</string>
+    <string name="quotes_author">"\"It always seems impossible until its' done"\"</string>
 </resources>
