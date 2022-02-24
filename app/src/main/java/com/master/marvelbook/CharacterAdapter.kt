@@ -30,7 +30,11 @@ class CharacterAdapter(val data: List<Result>, val context: Context): RecyclerVi
 
         val move = holder.charactersDetail
         move.setOnClickListener {
-            onClick(data[position].urls[1].url)
+            if (data[position].urls[0].type.equals("detail")) {
+                onClick(data[position].urls[0].url)
+            } else {
+                onClick(data[position].urls[0].url)
+            }
         }
     }
 

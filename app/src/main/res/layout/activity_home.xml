@@ -3,12 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home"
-    android:background="@drawable/splash_screen">
+    tools:context=".Home">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_heroes"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/activity_home" />
+        tools:listitem="@layout/item_row_hero" />
 
 </RelativeLayout>

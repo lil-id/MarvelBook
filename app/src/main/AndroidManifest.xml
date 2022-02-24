@@ -6,12 +6,15 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/marvel"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MarvelBook"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".Home"
+            android:exported="false" />
         <activity
             android:name=".CharactersDetail"
             android:exported="false" />
