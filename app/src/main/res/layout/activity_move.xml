@@ -19,9 +19,9 @@
         android:layout_height="142dp"
         android:layout_marginLeft="110dp"
         android:layout_marginTop="160dp"
-        app:civ_border_width="1dp"
+        android:src="@drawable/author"
         app:civ_border_color="#FFFFFF"
-        android:src="@drawable/author" />
+        app:civ_border_width="2dp" />
 
     <TextView
         android:id="@+id/name_author"
@@ -62,12 +62,25 @@
         android:textStyle="normal" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_follow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="120dp"
-        android:layout_marginRight="120dp"
         android:layout_marginTop="670dp"
+        android:layout_marginRight="120dp"
+        android:background="@drawable/rounded_button"
         android:text="Contact Me" />
+
+    <TextView
+        android:id="@+id/email_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="370dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/holilhaqalim_gmail_com"
+        android:textAlignment="center"
+        android:textColor="#322E2E"
+        android:textSize="13sp"
+        android:textStyle="normal" />
 
 </RelativeLayout>

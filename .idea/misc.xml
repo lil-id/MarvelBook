@@ -8,8 +8,10 @@
         <entry key="app/src/main/res/drawable/ic_baseline_person.xml" value="0.3035" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.157" />
         <entry key="app/src/main/res/drawable/image_view.xml" value="0.157" />
+        <entry key="app/src/main/res/drawable/rounded_button.xml" value="0.3035" />
         <entry key="app/src/main/res/layout/activity_about_author.xml" value="0.3111413043478261" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.4" />
+        <entry key="app/src/main/res/layout/activity_characters_detail.xml" value="0.27927927927927926" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3879849812265332" />
         <entry key="app/src/main/res/layout/activity_move.xml" value="0.4" />
         <entry key="app/src/main/res/layout/item_row_hero.xml" value="0.3238095238095238" />
         <entry key="app/src/main/res/menu/about.xml" value="0.3229166666666667" />

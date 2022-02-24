@@ -9,8 +9,8 @@
 
     <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/img_item_photo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="225dp"
         android:layout_marginEnd="8dp"
         app:riv_corner_radius="10dip"
         tools:src="@tools:sample/avatars"/>
@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginBottom="8dp"
-            android:textColor="#A1887F"
+            android:textColor="#383534"
             android:textSize="16sp"
             android:textStyle="bold"
             tools:text="@string/heroes_name" />
@@ -37,17 +37,18 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:ellipsize="end"
-            android:maxLines="2"
+            android:maxLines="5"
             tools:text="@string/about" />
 
         <TextView
             android:id="@+id/tv_item_detail"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            android:layout_marginStart="5dp"
             android:layout_weight="1"
-            android:text="@string/detail" />
+            android:text="@string/detail"
+            android:textColor="#2196F3"/>
     </LinearLayout>
 </LinearLayout>

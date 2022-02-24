@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.master.marvelbook.data.CharacterData
@@ -22,13 +23,14 @@ class MainActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.rv_heroes)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        APIService.instance.getCharacters(Constants.ts, Constants.APIKey, Constants.hash)
+        APIService.instance.getCharacters(Constants.limit, Constants.ts, Constants.APIKey, Constants.hash)
             .enqueue(object: Callback<CharacterData> {
                 override fun onResponse(
                     call: Call<CharacterData>,
                     response: Response<CharacterData>
                 ) {
-                    recyclerView.adapter = CharacterAdapter(response.body()!!.data.results, this@MainActivity)
+                    recyclerView.adapter =
+                        response.body()?.data?.let {CharacterAdapter(it.results, this@MainActivity)}
                 }
 
                 override fun onFailure(call: Call<CharacterData>, t: Throwable) {
@@ -49,8 +51,8 @@ class MainActivity : AppCompatActivity() {
     private fun setMode(selectedMode: Int) {
         when (selectedMode) {
             R.id.about_author -> {
-                val moveIntent = Intent(this@MainActivity, AboutAuthor::class.java)
-                startActivity(moveIntent)
+                val detailAuthor = Intent(this@MainActivity, AboutAuthor::class.java)  // new activity in MainActivity
+                startActivity(detailAuthor)
             }
         }
     }

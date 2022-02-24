@@ -13,6 +13,9 @@
         android:theme="@style/Theme.MarvelBook"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".CharactersDetail"
+            android:exported="false" />
+        <activity
             android:name=".AboutAuthor"
             android:exported="false" />
         <activity
