@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.ProgressBar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.master.marvelbook.data.CharacterData
@@ -15,12 +17,15 @@ import retrofit2.Response
 
 class Home : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
+    private lateinit var progressBar: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
         recyclerView = findViewById(R.id.rv_heroes)
+        progressBar = findViewById(R.id.progress_bar_home)
+        progressBar.visibility = View.VISIBLE
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         APIService.instance.getCharacters(Constants.limit, Constants.ts, Constants.APIKey, Constants.hash)
@@ -31,9 +36,11 @@ class Home : AppCompatActivity() {
                 ) {
                     recyclerView.adapter =
                         response.body()?.data?.let {CharacterAdapter(it.results, this@Home)}
+                    progressBar.visibility = View.GONE
                 }
 
                 override fun onFailure(call: Call<CharacterData>, t: Throwable) {
+                    progressBar.visibility = View.GONE
                 }
 
             })

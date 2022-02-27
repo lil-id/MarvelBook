@@ -49,7 +49,7 @@ class CharacterAdapter(val data: List<Result>, val context: Context): RecyclerVi
             context,
             CharactersDetail::class.java
         )  // new activity from a non MainActivity class
-        moveIntent.putExtra(CharactersDetail.URL, dataUrl)
+        moveIntent.putExtra(CharactersDetail.url, dataUrl)
         context.startActivity(moveIntent)
     }
 }
