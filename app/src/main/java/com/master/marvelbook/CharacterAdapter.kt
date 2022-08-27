@@ -8,9 +8,9 @@ import android.widget.Toast
 import com.master.marvelbook.data.Result
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.faltenreich.skeletonlayout.Skeleton
 
 class CharacterAdapter(val data: List<Result>, val context: Context): RecyclerView.Adapter<CharacterHolder>() {
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CharacterHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(
